@@ -13,19 +13,18 @@ int main()
    {
        myLED = 0;
        myLED2 = 1;
+
       ThisThread::sleep_for(500ms);
+      
       Led3(myLED2);
-      myLED2=0;
-      ThisThread::sleep_for(500ms);
       Led1(myLED);
-      myLED=0;
-      ThisThread::sleep_for(500ms);
+      
   }
 }
 
 void Led3(DigitalOut &ledpin)
 {
-   for (int i = 0; i < 4; i++)
+   for (int i = 0; i < 5; i++)
    {                     
       ledpin = !ledpin; 
       ThisThread::sleep_for(500ms);
@@ -34,7 +33,7 @@ void Led3(DigitalOut &ledpin)
 
 void Led1(DigitalOut &ledpin)
 {
-   for (int i = 0; i < 3 ;i++)
+   for (int i = 0; i < 4 ;i++)
    {                     
       ledpin = !ledpin; 
       ThisThread::sleep_for(500ms);
